@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Pablo aprendendo HTML</title> <!--Aparece no nome da aba, favoritos, mecanismo busca-->
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="image/x-icon" href="D:\Programação\Arquivos\IMAGENS\favicon.ico"> <!--Ícone que aparece na aba/favoritos-->
+        <meta name="description" content="Colocar aqui a descrição da página">
+        <meta name="keywords" content="Pablo, Aula, Palavras-Chaves">
+        <meta name="robots" content="index">
+        <meta http-equiv="refresh" content="30"> <!--Atualize o documento a cada 30 segundos:-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Configurando a janela de visualização para que seu site fique bem em todos os dispositivos-->
+        <!--Definir estilo a toda página a partir de referencias. no caso abaixo, BODY e H1-->
+        <style>  
+            body {background-color: black; color: white;} 
+            h1 {color: #66ff33;}
+            table {
+                width: 100%;
+                border-collapse:separate;
+                border-spacing: 5px 20px;
+                border:3px solid rgb(19, 100, 23);
+                color: black;
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                  }
+
+            thead {
+                font-size: 20pt;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: aqua;
+            }
+                  
+            tr, td, th {        
+                border:2px solid rgb(0, 0, 0) 
+                  }
+            
+            tbody tr:nth-child(even) {
+                background-color:blanchedalmond;
+            }
+
+            tbody tr:nth-child(odd) {
+                background-color:aliceblue;
+            }
+
+            tbody tr:hover {
+                background-color: yellow;
+            }
+
+                  
+        </style> 
+        <!--Acima em TR, TH, TD é uma forma de aplicar o mesmo estilo a vários "ID's/Tags/Classes"-->
+
+
+
+        <script>
+            window.onload = function() {
+                document.getElementById("BtnClick").addEventListener("click",function() {
+                    var nomedaVariavel = document.getElementById("Bora")
+                    nomedaVariavel.innerHTML = "Já fui....seguuuuuuuuuuuuura!!!!"
+                })
+            }
+        </script>
+
+
+
+    </head>
+
+    <body>
+        <h1 id="inicio">Olá Mundo!</h1>
+        <img src="D:\Programação\Arquivos\IMAGENS\Pablo.jpg" alt="Pablo no Computador Trabalhando" width="400">
+        <br>
+        <h2>Cheguei</h2>
+        <h3>Agora se prepare</h3>
+        <h4>Porque vim para ficar</h4>
+        <h5>E mudar essa bagaça</h5>
+        <h6 id="Bora">Bora lá</h6>
+        <button id="BtnClick">Então clique aqui!</button><br><br>
+        <img src="D:\Programação\Arquivos\IMAGENS\digitando.gif" width="400" alt="Pessoa digitando rapidamente">
+
+        <h2 style="color: red"> O que é HTML?</h2>
+        <p>HTML é uma linguagem de marcação utilizada na construção de páginas na Web.       
+        </p>
+        <p><b>Documentos HTML </b>podem ser interpretados por navegadores. A tecnologia é fruto da junção entre os padrões HyTime e SGML. <i>HyTime é um padrão para a representação estruturada de hipermídia e conteúdo baseado em tempo.</i>
+        </p>
+        <p><a href="https://www.hostinger.com.br/tutoriais/o-que-e-html-conceitos-basicos" target="_blank">Clique aqui para maiores informações!</a>
+        </p>
+        <br>
+
+        <h3 style="color:blueviolet"><a href="Tags semanticas.html#lista">Tags Semânticas</a> </h3>
+        <p>O html oferece outras tags container para faciliar a interpretação de documentos html. Tags semânticas dao significado ao conteúdo. Elementos "conteiners"    
+        </p> 
+        <p>Exemplos de tags: HEADER, SECTION, NAV, MAIN, FOOTER, DETAILS, SUMMARY, ADDRESS, ASIDE, DIV...
+        </p>
+        <img src="D:\Programação\Arquivos\IMAGENS\tags_semanticas.png" width="900">
+        </p>
+        <a href="#inicio"><button>Início</button></a><br>
+        <a href="#inicio">Início</a><br><br>
+        <a href="mailto:pablofernandes@hotmail.com">Me mande um e-mail!</a><br>
+        <a href="tel:+5534999150603">Fale comigo!</a><br>
+        <br>
+        <br>
+        <h3>Teste de Tabelas</h3>
+
+        <h4>Tabela simples sem bordas.</h4>
+
+        <table>
+            <tr>
+                <td>Nome</td>
+                <td>Telefone</td>
+                <td>Endereço</td>
+            </tr>
+            <tr>
+                <td>João Pedro</td>
+                <td>9199-5854</td>
+                <td>Rua dos Malucos 171</td>
+            </tr>
+        </table>
+        <br>
+
+        <h4>Tabela c/ bordas e mesclagem de linhas (rowspan) e de colunas (colspan)</h4>
+     
+        <table border="1" style="background-color:white"> <!--Ao colocar um estilo em table no '<head>' esse estilo é desconsiderado -->
+            <caption>Tabela 1 - Lista de Prospect's</caption>
+            <thead>
+            <tr>
+                <th rowspan="2">Nome</th>
+                <th rowspan="2">Telefone</th>
+                <th colspan="2">Endereço</th>
+            </tr>           
+            <tr>
+                <th>Logradouro</th>
+                <th>Nº</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>João Pedro</td>
+                <td>9199-5854</td>
+                <td>Rua dos Malucos</td>
+                <td>171</td>
+            </tr>
+            <tr>
+                <td>João Carlos</td>
+                <td>9199-5854</td>
+                <td>Rua dos Malucos</td>
+                <td>171</td>
+            </tr>
+            <tr>
+                <td>João Bosco</td>
+                <td>9199-5854</td>
+                <td>Rua dos Malucos</td>
+                <td>171</td>
+            </tr>
+            <tr>
+                <td>João Pedro</td>
+                <td>9199-5854</td>
+                <td>Rua dos Malucos</td>
+                <td>171</td>
+            </tr>
+            <tr>
+                <td>João Carlos</td>
+                <td>9199-5854</td>
+                <td>Rua dos Malucos</td>
+                <td>171</td>
+            </tr>
+            <tr>
+                <td>João Bosco</td>
+                <td>9199-5854</td>
+                <td>Rua dos Malucos</td>
+                <td>171</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="4"><i>Os dados desta tabela são confidenciais!</i></td>
+            </tr>
+            </tfoot>
+        </table>
+        
+
+
+
+
+
+    </body>
+
+
+</html>
